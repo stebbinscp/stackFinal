@@ -1,0 +1,243 @@
+{
+	"info": {
+		"_postman_id": "6213fd19-0808-4d3d-bf36-8d32c4d3e0cc",
+		"name": "Netflix",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "positive",
+			"item": [
+				{
+					"name": "get_all_netflix",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://container-service-1.d6g1bc3abar1i.us-east-1.cs.amazonlightsail.com/netflix",
+							"protocol": "https",
+							"host": [
+								"container-service-1",
+								"d6g1bc3abar1i",
+								"us-east-1",
+								"cs",
+								"amazonlightsail",
+								"com"
+							],
+							"path": [
+								"netflix"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post_netflix",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"test!\",\n    \"synopsis\": \"test\",\n    \"img\": \"https://occ-0-2773-2774.1.nflxso.net/dnm/api/v6/evlCitJPPCVCry0BZlEFb5-QjKc/AAAABYEdZ-HD_M6pLn4ekdxnAoZD3fVDdg_-J8QznXiONyPRIogIyzrkgtxX0KCT6jvX_laMAJ8fkS7e5E5T3u4sp8Fwtg.jpg?r\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://container-service-1.d6g1bc3abar1i.us-east-1.cs.amazonlightsail.com/netflix",
+							"protocol": "https",
+							"host": [
+								"container-service-1",
+								"d6g1bc3abar1i",
+								"us-east-1",
+								"cs",
+								"amazonlightsail",
+								"com"
+							],
+							"path": [
+								"netflix"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_netflix",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"test!\",\n    \"synopsis\": \"test change\",\n    \"img\": \"https://occ-0-2773-2774.1.nflxso.net/dnm/api/v6/evlCitJPPCVCry0BZlEFb5-QjKc/AAAABYEdZ-HD_M6pLn4ekdxnAoZD3fVDdg_-J8QznXiONyPRIogIyzrkgtxX0KCT6jvX_laMAJ8fkS7e5E5T3u4sp8Fwtg.jpg?r\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://container-service-1.d6g1bc3abar1i.us-east-1.cs.amazonlightsail.com/netflix/612652fb1062c8a3e3bf6287",
+							"protocol": "https",
+							"host": [
+								"container-service-1",
+								"d6g1bc3abar1i",
+								"us-east-1",
+								"cs",
+								"amazonlightsail",
+								"com"
+							],
+							"path": [
+								"netflix",
+								"612652fb1062c8a3e3bf6287"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://container-service-1.d6g1bc3abar1i.us-east-1.cs.amazonlightsail.com/netflix/612652fb1062c8a3e3bf6287",
+							"protocol": "https",
+							"host": [
+								"container-service-1",
+								"d6g1bc3abar1i",
+								"us-east-1",
+								"cs",
+								"amazonlightsail",
+								"com"
+							],
+							"path": [
+								"netflix",
+								"612652fb1062c8a3e3bf6287"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "negative",
+			"item": [
+				{
+					"name": "delete_fail",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/netflix/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"netflix",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_fail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://container-service-1.d6g1bc3abar1i.us-east-1.cs.amazonlightsail.com/netflix/612652fb1062c8a3e3bf6287/no",
+							"protocol": "https",
+							"host": [
+								"container-service-1",
+								"d6g1bc3abar1i",
+								"us-east-1",
+								"cs",
+								"amazonlightsail",
+								"com"
+							],
+							"path": [
+								"netflix",
+								"612652fb1062c8a3e3bf6287",
+								"no"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_fail",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"test!\",\n    \"synopsis\": \"failed\",\n    \"img\": \"https://occ-0-2773-2774.1.nflxso.net/dnm/api/v6/evlCitJPPCVCry0BZlEFb5-QjKc/AAAABYEdZ-HD_M6pLn4ekdxnAoZD3fVDdg_-J8QznXiONyPRIogIyzrkgtxX0KCT6jvX_laMAJ8fkS7e5E5T3u4sp8Fwtg.jpg?r\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://container-service-1.d6g1bc3abar1i.us-east-1.cs.amazonlightsail.com/netflix/612652fb1062c8a3e3bf6287/3",
+							"protocol": "https",
+							"host": [
+								"container-service-1",
+								"d6g1bc3abar1i",
+								"us-east-1",
+								"cs",
+								"amazonlightsail",
+								"com"
+							],
+							"path": [
+								"netflix",
+								"612652fb1062c8a3e3bf6287",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post_fail",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://container-service-1.d6g1bc3abar1i.us-east-1.cs.amazonlightsail.com/netflix/612652fb1062c8a3e3bf6287",
+							"protocol": "https",
+							"host": [
+								"container-service-1",
+								"d6g1bc3abar1i",
+								"us-east-1",
+								"cs",
+								"amazonlightsail",
+								"com"
+							],
+							"path": [
+								"netflix",
+								"612652fb1062c8a3e3bf6287"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
